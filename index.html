@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Milestone 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
+        <style>
+            hr.solid { border-top: 3px solid #bbb; }
+            .image img {
+                width: auto;
+                height: auto;
+                max-width: 70%;
+                max-height: 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="m-5">
+            
+            <h1 class="title is-1">
+                Milestone 1: Visualization Critique
+            </h1>
+            <h4 class="subtitle is-4">Jia Jun, Yi Kang, Stuart</h1 class="title is-4">
+            
+            
+            <hr class="solid">
+            
+            <br>
+            
+            <figure class="is-flex image is-align-items-center is-justify-content-center">
+                <img src="pictures/obama_budget.png">
+            </figure>
+
+            <br>
+
+            <h3 class="title is-3 is-flex image is-align-items-center is-justify-content-center">
+                Obama’s 2013 Budget Proposal Critique
+            </h3>
+            <a class="is-flex image is-align-items-center is-justify-content-center" 
+            href="https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html">
+                Source: www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
+            </a>
+
+            <br>
+
+            <div class="columns is-desktop is-tablet">
+                <div class="column container is-fluid">
+                    <div class="notification is-info content">
+                        <h5 >Domain</h5>
+                            <ul>
+                                <li>General populace who want a clear way to view the proposed spendings for departments in the US government.</li>
+                            </ul>
+                        <h5>Data / Task Abstraction</h5>
+                            <ul>
+                                <li>Data shows the forecasted spending amount, spending types, % change of spending, forecasted total spending of each department.</li>
+                            </ul>
+                        <h5>Idiom</h5>
+                            <ul>
+                                <li>Uses a circular packed bubble chart to represent the spending of each department</li>
+                                <li>A color scale is used to represented the proposed budget % increase/decrease from the previous year</li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="column container is-fluid">
+                    <div class="notification is-danger content">
+                        <h5 >Critiques</h5>
+                            <ul>
+                                <li>Unable to tell the spending each circle represent at a glance without hovering over it</li>
+                                <li>Some circles are too small which can make it too hard for a user to examine</li>
+                                <li>By itself, colour scale is not an effective way to represent the % increase/decrease</li>
+                                <li>Ordering does not represent any information other then the % increase/decrease</li>
+                                <li>Data categorized according to departments is not ordered</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <figure class="is-flex image is-align-items-center is-justify-content-center">
+                <img src="pictures/proposed_solution1.png">
+            </figure>
+
+            <br>
+
+            <h3 class="title is-3 is-flex image is-align-items-center is-justify-content-center">
+                Proposed Improvement (US Budget Proposal)
+            </h3>
+
+            <div class="columns is-desktop is-tablet">
+                <div class="column is-two-thirds-desktop container is-fluid">
+                    <div class="notification is-primary content">
+                        <h5 >Improvements</h5>
+                            <ul>
+                                <li>Changed prev color channel representing % change to positional. Circles are positioned on y-axis according to % increase/decrease, allowing for better clarity of scale.</li>
+                                <li>Data can be ordered by departments while staying aligned with the y-scale.</li>
+                                <li>Color changed to match departments. Can be changed to match different spending types.</li>
+                                <li>More space means it's easier to discover smaller circles.</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="solid">
+
+            <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+            <br>
+            
+            <figure class="is-flex image is-align-items-center is-justify-content-center">
+                <img src="pictures/UK-Government-Spending.png">
+            </figure>
+
+            <br>
+
+            <h3 class="title is-3 is-flex image is-align-items-center is-justify-content-center">
+                UK Income Budget in 2015
+            </h3>
+            <a class="is-flex image is-align-items-center is-justify-content-center" 
+            href="https://informationisbeautiful.net/visualizations/uk-government-spending-incomes-outcomes/">
+                Source: informationisbeautiful.net/visualizations/uk-government-spending-incomes-outcomes/
+            </a>
+
+            <br>
+
+            <div class="columns is-desktop is-tablet">
+                <div class="column container is-fluid">
+                    <div class="notification is-info content">
+                        <h5 >Domain</h5>
+                            <ul>
+                                <li>General populace who want a clear way to view where taxes come from and how they are used by the UK government.</li>
+                            </ul>
+                        <h5>Data / Task Abstraction</h5>
+                            <ul>
+                                <li>Data shows the tax income and spending of the UK government in 2015. Income shows amount, and %. Spending shows amount, %, and average $ contributed by taxpayers per day.</li>
+                            </ul>
+                        <h5>Idiom</h5>
+                            <ul>
+                                <li>Uses a tree diagram - top tree shows income and bottom tree shows spendings.</li>
+                                <li>Branches out the roots based on money received/spent, where larger sum of money have larger roots and smaller sum of money have smaller roots.</li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="column container is-fluid">
+                    <div class="notification is-danger content">
+                        <h5 >Critiques</h5>
+                            <ul>
+                                <li>Difficult to look for individual sections.</li>
+                                <li>At a glance, shows total income obtained. There is no total outgoing budget.</li>
+                                <li>Difficulty knowing if points along branches are part of the section total. Parent child relationship is not clear.</li>
+                                <li>Too much data being presented at once</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <figure class="is-flex image is-align-items-center is-justify-content-center">
+                <img src="pictures/proposed_solution2.png">
+            </figure>
+
+            <br>
+
+            <h3 class="title is-3 is-flex image is-align-items-center is-justify-content-center">
+                Proposed Improvement (UK Government Incomes & Outcomes)
+            </h3>
+
+            <div class="columns is-desktop is-tablet">
+                <div class="column is-two-thirds-desktop container is-fluid">
+                    <div class="notification is-primary content">
+                        <h5 >Improvements</h5>
+                            <ul>
+                                <li>Changed to force diagram that users can intercact with.</li>
+                                <li>Nodes can display information that allows users to identify the section.</li>
+                                <li>Links and arrows can be used to highlight parent child relationship.</li>
+                                <li>Less important data can be hidden behind tooltips, or toggled for mobile friendly set-up, to ensure visual clarity.</li>
+                                <li>Node sizes can give users a high level overview of which areas amount to more.</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
