@@ -13,9 +13,30 @@
             .image img {
                 width: auto;
                 height: auto;
-                max-width: 70%;
-                max-height: 70%;
+               /* max-width: 70%;
+                max-height: 70%;*/
             }
+
+            .image-column {
+                display: inline-block;
+            }
+
+            .scrollable {
+                position: sticky;
+                display: inline-block;
+                vertical-align: top;
+                max-height: 65vh;
+                overflow-y: auto;
+            }
+
+            .scrollable-long {
+                position: sticky;
+                display: inline-block;
+                vertical-align: top;
+                max-height: 155vh;
+                overflow-y: auto;
+            }
+
         </style>
     </head>
     <body>
@@ -26,37 +47,42 @@
             </h1>
             <h4 class="subtitle is-4">Jia Jun, Yi Kang, Stuart</h1 class="title is-4">
             
-            
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
             <hr class="solid">
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
             
-            <br>
-            
-            <figure class="is-flex image is-align-items-center is-justify-content-center">
-                <img src="pictures/obama_budget.png">
-            </figure>
+            <br><br>
 
-            <br>
-
-            <h3 class="title is-3 is-flex image is-align-items-center is-justify-content-center">
+            <h2 class="title is-2 is-flex image is-align-items-center is-justify-content-center">
                 Obama’s 2013 Budget Proposal Critique
-            </h3>
-            <a class="is-flex image is-align-items-center is-justify-content-center" 
-            href="https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html">
-                Source: www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
-            </a>
+            </h2>
+            <a class="is-flex is-align-items-center is-justify-content-center  is-size-5" 
+                    href="https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html">
+                        Source: www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
+                    </a>
 
-            <br>
+            <br> <br>
 
             <div class="columns is-desktop is-tablet">
-                <div class="column container is-fluid">
-                    <div class="notification is-info content">
+
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <figure class="is-flex image is-align-items-center is-justify-content-center">
+                        <img src="pictures/obama_budget.png">
+                    </figure>
+                </div>
+
+                <div class="column container is-fluid scrollable">
+                    <div class="notification is-info content is-size-5">
                         <h5 >Domain</h5>
                             <ul>
                                 <li>General populace who want a clear way to view the proposed spendings for departments in the US government.</li>
                             </ul>
                         <h5>Data / Task Abstraction</h5>
                             <ul>
-                                <li>Data shows the forecasted spending amount, spending types, % change of spending, forecasted total spending of each department.</li>
+                                <li>Forecasted spending amount</li>
+                                <li>Budget % increase/decrease</li>
+                                <li>Spending types</li>
+                                <li>Total amount for each department.</li>
                             </ul>
                         <h5>Idiom</h5>
                             <ul>
@@ -65,9 +91,8 @@
                                 <li>A color scale is used to represented the proposed budget % increase/decrease from the previous year</li>
                             </ul>
                     </div>
-                </div>
-                <div class="column container is-fluid">
-                    <div class="notification is-danger content">
+
+                    <div class="notification is-danger content is-size-5">
                         <h5 >Critiques</h5>
                             <ul>
                                 <li>Unable to tell the spending each circle represent at a glance without hovering over it</li>
@@ -82,21 +107,23 @@
                 </div>
             </div>
 
+            <br><br>
+
+            <h2 class="title is-2 is-flex is-align-items-center is-justify-content-center">
+                Proposed Improvement
+            </h2>
+
             <br>
-
-            <figure class="is-flex image is-align-items-center is-justify-content-center">
-                <img src="pictures/proposed_solution1.png">
-            </figure>
-
-            <br>
-
-            <h3 class="title is-3 is-flex image is-align-items-center is-justify-content-center">
-                Proposed Improvement (US Budget Proposal)
-            </h3>
 
             <div class="columns is-desktop is-tablet">
-                <div class="column is-two-thirds-desktop container is-fluid">
-                    <div class="notification is-primary content">
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <figure class="is-flex is-align-items-center is-justify-content-center image">
+                        <img src="pictures/proposed_solution1.png">
+                    </figure>
+                </div>
+
+                <div class="column container is-fluid scrollable">
+                    <div class="notification is-primary content is-size-5">
                         <h5 >Improvements</h5>
                             <ul>
                                 <li>Changed prev color channel representing % change to positional. Circles are positioned on y-axis according to % increase/decrease, allowing for better clarity of scale.</li>
@@ -111,31 +138,30 @@
                 </div>
             </div>
 
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
             <hr class="solid">
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
 
-            <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <br> <br>
 
-            <br>
-            
-            <figure class="is-flex image is-align-items-center is-justify-content-center">
-                <img src="pictures/UK-Government-Spending.png">
-            </figure>
-
-            <br>
-
-            <h3 class="title is-3 is-flex image is-align-items-center is-justify-content-center">
+            <h2 class="title is-2 is-flex is-align-items-center is-justify-content-center">
                 UK Income Budget in 2015
-            </h3>
+            </h2>
             <a class="is-flex image is-align-items-center is-justify-content-center" 
             href="https://informationisbeautiful.net/visualizations/uk-government-spending-incomes-outcomes/">
                 Source: informationisbeautiful.net/visualizations/uk-government-spending-incomes-outcomes/
             </a>
 
-            <br>
+            <br> <br>
 
             <div class="columns is-desktop is-tablet">
-                <div class="column container is-fluid">
-                    <div class="notification is-info content">
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <figure class="is-flex is-align-items-center is-justify-content-center image">
+                        <img src="pictures/UK-Government-Spending.png">
+                    </figure>
+                </div>
+                <div class="column container is-fluid scrollable-long">
+                    <div class="notification is-info content is-size-5">
                         <h5 >Domain</h5>
                             <ul>
                                 <li>General populace who want a clear way to view where taxes come from and how they are used by the UK government.</li>
@@ -151,9 +177,8 @@
                                 <li>Branches out the roots based on money received/spent, where larger sum of money have larger roots and smaller sum of money have smaller roots.</li>
                             </ul>
                     </div>
-                </div>
-                <div class="column container is-fluid">
-                    <div class="notification is-danger content">
+
+                    <div class="notification is-danger content is-size-5">
                         <h5 >Critiques</h5>
                             <ul>
                                 <li>Difficult to look for individual sections.</li>
@@ -168,21 +193,23 @@
                 </div>
             </div>
 
+            <br><br>
+
+            <h2 class="title is-2 is-flex is-align-items-center is-justify-content-center">
+                Proposed Improvement
+            </h2>
+
             <br>
-
-            <figure class="is-flex image is-align-items-center is-justify-content-center">
-                <img src="pictures/proposed_solution2.png">
-            </figure>
-
-            <br>
-
-            <h3 class="title is-3 is-flex image is-align-items-center is-justify-content-center">
-                Proposed Improvement (UK Government Incomes & Outcomes)
-            </h3>
 
             <div class="columns is-desktop is-tablet">
-                <div class="column is-two-thirds-desktop container is-fluid">
-                    <div class="notification is-primary content">
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <figure class="is-flex is-align-items-center is-justify-content-center image">
+                        <img src="pictures/proposed_solution2.png">
+                    </figure>
+                </div>
+
+                <div class="column container is-fluid scrollable">
+                    <div class="notification is-primary content is-size-5">
                         <h5 >Improvements</h5>
                             <ul>
                                 <li>Changed to force diagram that users can intercact with.</li>
