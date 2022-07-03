@@ -109,6 +109,8 @@
 
             <br><br>
 
+            <!------------------------------------------------ Proposed improvement 1 ---------------------------------------------------------->
+
             <h2 class="title is-2 is-flex is-align-items-center is-justify-content-center">
                 Proposed Improvement
             </h2>
@@ -147,7 +149,7 @@
             <h2 class="title is-2 is-flex is-align-items-center is-justify-content-center">
                 UK Income Budget in 2015
             </h2>
-            <a class="is-flex image is-align-items-center is-justify-content-center" 
+            <a class="is-flex image is-align-items-center is-justify-content-center is-size-5" 
             href="https://informationisbeautiful.net/visualizations/uk-government-spending-incomes-outcomes/">
                 Source: informationisbeautiful.net/visualizations/uk-government-spending-incomes-outcomes/
             </a>
@@ -168,32 +170,39 @@
                             </ul>
                         <h5>Data / Task Abstraction</h5>
                             <ul>
-                                <li>Data shows the tax income and spending of the UK government in 2015. Income shows amount, and %. Spending shows amount, %, and average $ contributed by taxpayers per day.</li>
+                                <li>Tax income amount by total and category</li>
+                                <li>Tax spending amount by category</li>
+                                <li>% of income and spending by category</li>
+                                <li>Spending amount contributed per day by taxpayers</li>
                             </ul>
                         <h5>Idiom</h5>
                             <ul>
                                 <li>Uses a tree diagram - top tree shows income and bottom tree shows spendings.</li>
                                 <br>
-                                <li>Branches out the roots based on money received/spent, where larger sum of money have larger roots and smaller sum of money have smaller roots.</li>
+                                <li>Branches out to nodes based on money received/spent, where larger sum of money have larger nodes and smaller sum of money have smaller nodes.</li>
                             </ul>
                     </div>
 
                     <div class="notification is-danger content is-size-5">
                         <h5 >Critiques</h5>
                             <ul>
-                                <li>Difficult to look for individual sections.</li>
+                                <li><strong>Unsuitable for desktop:</strong> Poster format makes it too small to read in its entirety and requires scrolling to read on desktop.</li>
                                 <br>
-                                <li>At a glance, shows total income obtained. There is no total outgoing budget.</li>
+                                <li><strong>Information overload:</strong> Too many different formats of data being presented at once creates a visual salad.</li>
                                 <br>
-                                <li>Difficulty knowing if points along branches are part of the section total. Parent child relationship is not clear.</li>
+                                <li><strong>Inconsistent summation:</strong> Total income is shown, but not total outgoing budget so you can't compare both. Likely due to design or data constraints.</li>
                                 <br>
-                                <li>Too much data being presented at once</li>
+                                <li><strong>Unclear parent-child relations:</strong> Design can be unclear in signifying that nodes along branches are part of the total. Also has some visual oddities.</li>
+                                <br>
+                                <li><strong>Colour confusion:</strong> Categories with the same colour seems to be imply somethind that is not actually there.</li>
                             </ul>
                     </div>
                 </div>
             </div>
 
             <br><br>
+
+            <!------------------------------------------------ Proposed improvement 2 ---------------------------------------------------------->
 
             <h2 class="title is-2 is-flex is-align-items-center is-justify-content-center">
                 Proposed Improvement
@@ -212,15 +221,15 @@
                     <div class="notification is-primary content is-size-5">
                         <h5 >Improvements</h5>
                             <ul>
-                                <li>Changed to force diagram that users can intercact with.</li>
+                                <li><strong>Force diagram:</strong> Suitable for a desktop format that users can intercact with. Able to fit both categories into the same area.</li>
                                 <br>
-                                <li>Nodes can display information that allows users to identify the section.</li>
+                                <li><strong>Just enough info shown:</strong> Nodes can show just the name and amount on them to ensure visual clarity. Further data can be hidden behind tooltips.</li>
                                 <br>
-                                <li>Links and arrows can be used to highlight parent child relationship.</li>
+                                <li><strong>Links and arrows:</strong> Denotes the parent child relationship between nodes and highlights the existence of smaller nodes.</li>
                                 <br>
-                                <li>Less important data can be hidden behind tooltips, or toggled for mobile friendly set-up, to ensure visual clarity.</li>
+                                <li><strong>Dynamic node sizes:</strong> Gives users quick visual feedback on which areas are worth more.</li>
                                 <br>
-                                <li>Node sizes can give users a high level overview of which areas amount to more.</li>
+                                <li><strong>Unique colouring:</strong> Helps to differentiate categories better.</li>
                             </ul>
                     </div>
                 </div>
