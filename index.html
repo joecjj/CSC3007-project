@@ -82,26 +82,36 @@
                                 <li>Forecasted spending amount</li>
                                 <li>Budget % increase/decrease</li>
                                 <li>Spending types</li>
-                                <li>Total amount for each department.</li>
+                                <li>Total amount for each department</li>
                             </ul>
                         <h5>Idiom</h5>
                             <ul>
-                                <li>Uses a circular packed bubble chart to represent the spending of each department</li>
+                                <li>Uses a circular packed bubble chart to represent the spending of each department.</li>
                                 <br>
-                                <li>A color scale is used to represented the proposed budget % increase/decrease from the previous year</li>
+                                <li>A color scale is used to represented the proposed budget % increase/decrease from the previous year.</li>
+                                <br>
+                                <li>Types of Spending tab splits the chart into the two spending types.</li>
+                                <br>
+                                <li>Changes tab showcases a graph of discretionary spending % increase/decrease (y-axis) for each department (x-axis).</li>
+                                <br>
+                                <li>Department Totals tab splits bubbles into cluster that sum the total spending per department.</li>
                             </ul>
                     </div>
 
                     <div class="notification is-danger content is-size-5">
                         <h5 >Critiques</h5>
                             <ul>
-                                <li>Unable to tell the spending each circle represent at a glance without hovering over it</li>
+                                <li><strong>Bubbles too small:</strong> Need to hover over bubbles to know what they are, but some of them are too small and packed together which can make hovering difficult.</li>
                                 <br>
-                                <li>Some circles are too small and packed together which can make it too hard for a user to examine</li>
+                                <li><strong>Lost ordering:</strong> Trying to examine bubbles under Department Totals tab is still difficult, as bubbles are mashed together without the highest to lowest change % ordering that's present in other tabs.</li>
                                 <br>
-                                <li>By itself, colour scale is not an effective way to accurately represent the % increase/decrease, better as a circle packed graph rather than an isolated instance</li>
+                                <li><strong>Unclear x-axis:</strong> Data in Changes tab is sorted by departments on the x-axis, but is not indicated.</li>
                                 <br>
-                                <li>Order of circle packed bubbles does not represent any information other then the % increase/decrease</li>
+                                <li><strong>Limited comparism:</strong> While users are able to compare spending between departments in the Changes tab, it is only for discetionary spending.</li>
+                                <br>
+                                <li><strong>Overlapping bubbles:</strong> Bubbles in the Changes tab tend to overlap, making it even harder to select smaller values that are clustered together.</li>
+                                <br>
+                                <li><strong>Redundant colour scale:</strong> Increase/decrease % is denoted on the y-axis in the changes tab, doing the same thing as the green to red colour scale.</li>
                             </ul>
                     </div>
                 </div>
@@ -128,13 +138,15 @@
                     <div class="notification is-primary content is-size-5">
                         <h5 >Improvements</h5>
                             <ul>
-                                <li>Changed prev color channel representing % change to positional. Circles are positioned on y-axis according to % increase/decrease, allowing for better clarity of scale.</li>
+                                <li><strong>Department changes tab:</strong> Create a new tab that focuses on the spending changes and amount for each department.</li>
                                 <br>
-                                <li>Data can be ordered by departments while staying aligned with the y-scale.</li>
+                                <li><strong>Clearer comparism:</strong> The addition of spending on the x-axis in conjuction with increase/decrease % allows users to better compare the spending areas of each department in an organized fashion.</li>
                                 <br>
-                                <li>Color changed to match departments. Can be changed to match different spending types.</li>
+                                <li><strong>Logarithmic scale:</strong> The spending scale is ogarithmic to ensure that smaller bubbles are spread further apart, highlighting their existence and reducing overlap possibility.</li>
                                 <br>
-                                <li>More space means it's easier to discover smaller circles.</li>
+                                <li><strong>Dropdown menu:</strong> Users have an option to select which departments they want to examine, rather than having to rely on the unorganized Department Totals tab.</li>
+                                <br>
+                                <li><strong>More options for colour:</strong> Allows users to swap the colour scale to a different category, making visual identification faster.</li>
                             </ul>
                     </div>
                 </div>
