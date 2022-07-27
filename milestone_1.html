@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Milestone 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
+        <style>
+            hr.solid { border-top: 3px solid #bbb; }
+            .image img {
+                width: auto;
+                height: auto;
+               /* max-width: 70%;
+                max-height: 70%;*/
+            }
+
+            .image-column {
+                display: inline-block;
+            }
+
+            .scrollable {
+                position: sticky;
+                display: inline-block;
+                vertical-align: top;
+                max-height: 65vh;
+                overflow-y: auto;
+            }
+
+            .scrollable-long {
+                position: sticky;
+                display: inline-block;
+                vertical-align: top;
+                max-height: 155vh;
+                overflow-y: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section class="m-5">
+
+            <button onclick="location.href = 'index.html';" class="button is-info is-pulled-right mt-3">
+                Home
+            </button>
+            
+            <h1 class="title is-1">
+                Milestone 1: Visualization Critique
+            </h1>
+            <h4 class="subtitle is-4">Jia Jun, Yi Kang, Stuart</h1 class="title is-4">
+            
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+            <hr class="solid">
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+            
+            <br><br>
+
+            <h2 class="title is-2 is-flex image is-align-items-center is-justify-content-center">
+                Obama’s 2013 Budget Proposal Critique
+            </h2>
+            <a class="is-flex is-align-items-center is-justify-content-center  is-size-5" 
+                    href="https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html">
+                        Source: www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
+                    </a>
+
+            <br> <br>
+
+            <div class="columns is-desktop is-tablet">
+
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <figure class="is-flex image is-align-items-center is-justify-content-center">
+                        <img src="pictures/obama_budget.png">
+                    </figure>
+                </div>
+
+                <div class="column container is-fluid scrollable">
+                    <div class="notification is-info content is-size-5">
+                        <h5 >Domain</h5>
+                            <ul>
+                                <li>General populace who want a clear way to view the proposed spendings for departments in the US government.</li>
+                            </ul>
+                        <h5>Data / Task Abstraction</h5>
+                            <ul>
+                                <li>Forecasted spending amount</li>
+                                <li>Budget % increase/decrease</li>
+                                <li>Spending types</li>
+                                <li>Total amount for each department</li>
+                            </ul>
+                        <h5>Idiom</h5>
+                            <ul>
+                                <li>Uses a circular packed bubble chart to represent the spending of each department.</li>
+                                <br>
+                                <li>A color scale is used to represented the proposed budget % increase/decrease from the previous year.</li>
+                                <br>
+                                <li>Types of Spending tab splits the chart into the two spending types.</li>
+                                <br>
+                                <li>Changes tab showcases a graph of discretionary spending % increase/decrease (y-axis) for each department (x-axis).</li>
+                                <br>
+                                <li>Department Totals tab splits bubbles into clusters that sum the total spending per department.</li>
+                            </ul>
+                    </div>
+
+                    <div class="notification is-danger content is-size-5">
+                        <h5 >Critiques</h5>
+                            <ul>
+                                <li><strong>Bubbles too small:</strong> Need to hover over bubbles to know what they are, but some of them are too small and packed together which can make hovering difficult.</li>
+                                <br>
+                                <li><strong>Lost ordering:</strong> Trying to examine bubbles under Department Totals tab is still difficult, as bubbles are mashed together without the highest to lowest change % ordering that's present in other tabs.</li>
+                                <br>
+                                <li><strong>Unclear x-axis:</strong> Data in Changes tab is sorted by departments on the x-axis, but is not indicated.</li>
+                                <br>
+                                <li><strong>Limited comparism:</strong> While users are able to compare spending between departments in the Changes tab, it is only for discetionary spending.</li>
+                                <br>
+                                <li><strong>Overlapping bubbles:</strong> Bubbles in the Changes tab tend to overlap, making it even harder to select smaller values that are clustered together.</li>
+                                <br>
+                                <li><strong>Redundant colour scale:</strong> Increase/decrease % is denoted on the y-axis in the changes tab, doing the same thing as the green to red colour scale.</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <!------------------------------------------------ Proposed improvement 1 ---------------------------------------------------------->
+
+            <h2 class="title is-2 is-flex is-align-items-center is-justify-content-center">
+                Proposed Improvement
+            </h2>
+
+            <br>
+
+            <div class="columns is-desktop is-tablet">
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <figure class="is-flex is-align-items-center is-justify-content-center image">
+                        <img src="pictures/proposed_solution1.png">
+                    </figure>
+                </div>
+
+                <div class="column container is-fluid scrollable">
+                    <div class="notification is-primary content is-size-5">
+                        <h5 >Improvements</h5>
+                            <ul>
+                                <li><strong>Department changes tab:</strong> Create a new tab that focuses on the spending changes and amount for each department.</li>
+                                <br>
+                                <li><strong>Clearer comparism:</strong> The addition of spending on the x-axis in conjuction with increase/decrease % allows users to better compare the spending areas of each department in an organized fashion.</li>
+                                <br>
+                                <li><strong>Logarithmic scale:</strong> The spending scale is ogarithmic to ensure that smaller bubbles are spread further apart, highlighting their existence and reducing overlap possibility.</li>
+                                <br>
+                                <li><strong>Dropdown menu:</strong> Users have an option to select which departments they want to examine, rather than having to rely on the unorganized Department Totals tab.</li>
+                                <br>
+                                <li><strong>More options for colour:</strong> Allows users to swap the colour scale to a different category, making visual identification faster.</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+            <hr class="solid">
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+
+            <br> <br>
+
+            <h2 class="title is-2 is-flex is-align-items-center is-justify-content-center">
+                UK Income Budget in 2015
+            </h2>
+            <a class="is-flex image is-align-items-center is-justify-content-center is-size-5" 
+            href="https://informationisbeautiful.net/visualizations/uk-government-spending-incomes-outcomes/">
+                Source: informationisbeautiful.net/visualizations/uk-government-spending-incomes-outcomes/
+            </a>
+
+            <br> <br>
+
+            <div class="columns is-desktop is-tablet">
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <figure class="is-flex is-align-items-center is-justify-content-center image">
+                        <img src="pictures/UK-Government-Spending.png">
+                    </figure>
+                </div>
+                <div class="column container is-fluid scrollable-long">
+                    <div class="notification is-info content is-size-5">
+                        <h5 >Domain</h5>
+                            <ul>
+                                <li>General populace who want a clear way to view where taxes come from and how they are used by the UK government.</li>
+                            </ul>
+                        <h5>Data / Task Abstraction</h5>
+                            <ul>
+                                <li>Tax income amount by total and category</li>
+                                <li>Tax spending amount by category</li>
+                                <li>% of income and spending by category</li>
+                                <li>Spending amount contributed per day by taxpayers</li>
+                            </ul>
+                        <h5>Idiom</h5>
+                            <ul>
+                                <li>Uses a tree diagram - top tree shows income and bottom tree shows spendings.</li>
+                                <br>
+                                <li>Branches out to nodes based on money received/spent, where larger sum of money have larger nodes and smaller sum of money have smaller nodes.</li>
+                            </ul>
+                    </div>
+
+                    <div class="notification is-danger content is-size-5">
+                        <h5 >Critiques</h5>
+                            <ul>
+                                <li><strong>Information overload:</strong> Too many different formats of data being presented at once creates a visual salad.</li>
+                                <br>
+                                <li><strong>Inconsistent summation:</strong> Total income is shown, but not total outgoing budget so you can't compare both. Likely due to design or data constraints.</li>
+                                <br>
+                                <li><strong>Unclear parent-child relations:</strong> Design can be unclear in signifying that nodes along branches are part of the total. Also has some visual oddities.</li>
+                                <br>
+                                <li><strong>Colour confusion:</strong> Categories with the same colour seems to be imply somethind that is not actually there.</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <!------------------------------------------------ Proposed improvement 2 ---------------------------------------------------------->
+
+            <h2 class="title is-2 is-flex is-align-items-center is-justify-content-center">
+                Proposed Improvement
+            </h2>
+
+            <br>
+
+            <div class="columns is-desktop is-tablet">
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <figure class="is-flex is-align-items-center is-justify-content-center image">
+                        <img src="pictures/proposed_solution2.png">
+                    </figure>
+                </div>
+
+                <div class="column container is-fluid scrollable">
+                    <div class="notification is-primary content is-size-5">
+                        <h5 >Improvements</h5>
+                            <ul>
+                                <li><strong>Force diagram:</strong> Reformatted to a force diagram that users can intercact with and is able to fit both categories into the same area.</li>
+                                <br>
+                                <li><strong>Just enough info shown:</strong> Nodes can show just the name and amount on them to ensure visual clarity. Further data can be hidden behind tooltips.</li>
+                                <br>
+                                <li><strong>Links and arrows:</strong> Denotes the parent child relationship between nodes and highlights the existence of smaller nodes.</li>
+                                <br>
+                                <li><strong>Dynamic node sizes:</strong> Gives users quick visual feedback on which areas are worth more.</li>
+                                <br>
+                                <li><strong>Unique colouring:</strong> Helps to differentiate categories better.</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
