@@ -65,6 +65,7 @@ Promise.all([d3.csv("data/SG-budget.csv")])
         .selectAll('circle')
         .data(root.descendants())
         .join('circle')
+        .attr("class", d =>d.data[0])
         .attr("fill", d => d.children ? color(d.depth) : "white")
         .attr("pointer-events", d => !d.children ? "none" : null)
         //.on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
@@ -93,7 +94,6 @@ Promise.all([d3.csv("data/SG-budget.csv")])
         const k = height / v[2];
     
         view = v;
-    
         label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
         nodes.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
         nodes.attr("r", d => d.r * k);
@@ -101,12 +101,11 @@ Promise.all([d3.csv("data/SG-budget.csv")])
 
     function zoom(event, d) {
         const focus0 = focus;
-    
         focus = d;
-    
         const transition = svg.transition()
             .duration(event.altKey ? 7500 : 750)
             .tween("zoom", d => {
+                //console.log("test"+d)
                 const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
                 return t => zoomTo(i(t));
             });
