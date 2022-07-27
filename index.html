@@ -9,39 +9,12 @@
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <style>
             hr.solid { border-top: 3px solid #bbb; }
-            
-            .Expenditure{
-                fill:red;
-            }
-            .Total.Expenditure{
-                fill:rgb(200, 63, 63)
-            }
-            .Revenue{
-                fill: green;
-            }
-            .Government.Administration{
-                fill:rgb(216, 133, 133)
-            }
-            .Social.Development{
-                fill:rgb(216, 133, 133)
-            }
-            .Security.and.External.Relations{
-                fill:rgb(216, 133, 133)
-            }
-            .Economic.Development{
-                fill:rgb(216, 133, 133)
-            }
-            .Operating.Revenue{
-                fill: rgb(119, 215, 119);
-            }
-            .Net.Investment.Income\/Returns.Contribution{
-                fill: rgb(119, 215, 119);
-            }
+
             .scrollable {
                 position: sticky;
                 display: inline-block;
                 vertical-align: top;
-                max-height: 80vh;
+                max-height: 90vh;
                 overflow-y: auto;
             }
 
@@ -95,45 +68,29 @@
                 
                 <div class="column container is-fluid scrollable">
                     <div class="notification is-info content is-size-5">
-                        <h5 >Domain</h5>
+                        <h5>What is this?</h5>
                             <ul>
-                                <li>General populace who want a clear way to view the proposed spendings for departments in the US government.</li>
+                                <li>A storytelling visualization to showcase the Singapore government's revenue and expenditures for 2021.</li>
                             </ul>
-                        <h5>Data / Task Abstraction</h5>
+                        <h5>Who is this for?</h5>
                             <ul>
-                                <li>Forecasted spending amount</li>
-                                <li>Budget % increase/decrease</li>
-                                <li>Spending types</li>
-                                <li>Total amount for each department</li>
+                                <li>For a general audience, from novice users to domain experts, local or international.</li>
                             </ul>
-                        <h5>Idiom</h5>
+                        <h5>How was it done?</h5>
                             <ul>
-                                <li>Uses a circular packed bubble chart to represent the spending of each department.</li>
-                                <br>
-                                <li>A color scale is used to represented the proposed budget % increase/decrease from the previous year.</li>
-                                <br>
-                                <li>Types of Spending tab splits the chart into the two spending types.</li>
-                                <br>
-                                <li>Changes tab showcases a graph of discretionary spending % increase/decrease (y-axis) for each department (x-axis).</li>
-                                <br>
-                                <li>Department Totals tab splits bubbles into clusters that sum the total spending per department.</li>
+                                <li>Data from data.gov.sg for was cleaned then transformed into this hierarchical circle packing chart using d3.</li>
                             </ul>
-                    </div>
-
-                    <div class="notification is-danger content is-size-5">
-                        <h5 >Critiques</h5>
+                        <h5>Some tidbits</h5>
                             <ul>
-                                <li><strong>Bubbles too small:</strong> Need to hover over bubbles to know what they are, but some of them are too small and packed together which can make hovering difficult.</li>
+                                <li>Zoom into circles by clicking on them. Clicking again on the same circle will zoom you out</li>
                                 <br>
-                                <li><strong>Lost ordering:</strong> Trying to examine bubbles under Department Totals tab is still difficult, as bubbles are mashed together without the highest to lowest change % ordering that's present in other tabs.</li>
+                                <li>Hover over a circle to see what it represents and how much money it's worth.</li>
                                 <br>
-                                <li><strong>Unclear x-axis:</strong> Data in Changes tab is sorted by departments on the x-axis, but is not indicated.</li>
+                                <li>Greenish hues symbolize expenditure, while redish hues symbolize revenue.</li>
                                 <br>
-                                <li><strong>Limited comparism:</strong> While users are able to compare spending between departments in the Changes tab, it is only for discetionary spending.</li>
+                                <li>This based on the UK budget shown in milestone 1, instead done in a hierarchical visualization with the SG budget.</li>
                                 <br>
-                                <li><strong>Overlapping bubbles:</strong> Bubbles in the Changes tab tend to overlap, making it even harder to select smaller values that are clustered together.</li>
-                                <br>
-                                <li><strong>Redundant colour scale:</strong> Increase/decrease % is denoted on the y-axis in the changes tab, doing the same thing as the green to red colour scale.</li>
+                                <li>Hope that this visualization helps to provide you with some insight on SG's fiscal position for 2021!</li>
                             </ul>
                     </div>
                 </div>
