@@ -1,0 +1,117 @@
+financial_year,actual_revised_estimated,category,item,sector,ministry,type,amount,percent_of_gdp
+2019,Actual,Expenditure,Total Expenditure,Social Development,Education,Operating,11932,0.023
+2019,Actual,Expenditure,Total Expenditure,Social Development,Education,Development,791,0.002
+2019,Actual,Expenditure,Total Expenditure,Social Development,National Development,Operating,2606,0.005
+2019,Actual,Expenditure,Total Expenditure,Social Development,National Development,Development,926,0.002
+2019,Actual,Expenditure,Total Expenditure,Social Development,Health,Operating,9915,0.019
+2019,Actual,Expenditure,Total Expenditure,Social Development,Health,Development,1404,0.003
+2019,Actual,Expenditure,Total Expenditure,Social Development,Sustainability and the Environment,Operating,1540,0.003
+2019,Actual,Expenditure,Total Expenditure,Social Development,Sustainability and the Environment,Development,1076,0.002
+2019,Actual,Expenditure,Total Expenditure,Social Development,"Culture, Community and Youth",Operating,1674,0.003
+2019,Actual,Expenditure,Total Expenditure,Social Development,"Culture, Community and Youth",Development,210,0
+2019,Actual,Expenditure,Total Expenditure,Social Development,Social and Family Development,Operating,2835,0.006
+2019,Actual,Expenditure,Total Expenditure,Social Development,Social and Family Development,Development,111,0
+2019,Actual,Expenditure,Total Expenditure,Social Development,Communications and Information,Operating,517,0.001
+2019,Actual,Expenditure,Total Expenditure,Social Development,Communications and Information,Development,41,0
+2019,Actual,Expenditure,Total Expenditure,Social Development,Social Manpower,Operating,1029,0.002
+2019,Actual,Expenditure,Total Expenditure,Social Development,Social Manpower,Development,2,0
+2019,Actual,Expenditure,Total Expenditure,Security and External Relations,Defence,Operating,13669,0.027
+2019,Actual,Expenditure,Total Expenditure,Security and External Relations,Defence,Development,481,0.001
+2019,Actual,Expenditure,Total Expenditure,Security and External Relations,Home Affairs,Operating,5703,0.011
+2019,Actual,Expenditure,Total Expenditure,Security and External Relations,Home Affairs,Development,972,0.002
+2019,Actual,Expenditure,Total Expenditure,Security and External Relations,Foreign Affairs,Operating,436,0.001
+2019,Actual,Expenditure,Total Expenditure,Security and External Relations,Foreign Affairs,Development,16,0
+2019,Actual,Expenditure,Total Expenditure,Economic Development,Economic Manpower,Operating,892,0.002
+2019,Actual,Expenditure,Total Expenditure,Economic Development,Economic Manpower,Development,65,0
+2019,Actual,Expenditure,Total Expenditure,Economic Development,Transport,Operating,1945,0.004
+2019,Actual,Expenditure,Total Expenditure,Economic Development,Transport,Development,6617,0.013
+2019,Actual,Expenditure,Total Expenditure,Economic Development,Trade and Industry,Operating,1116,0.002
+2019,Actual,Expenditure,Total Expenditure,Economic Development,Trade and Industry,Development,3176,0.006
+2019,Actual,Expenditure,Total Expenditure,Economic Development,Info-Communications and Media Development,Operating,535,0.001
+2019,Actual,Expenditure,Total Expenditure,Economic Development,Info-Communications and Media Development,Development,29,0
+2019,Actual,Expenditure,Total Expenditure,Government Administration,Finance,Operating,852,0.002
+2019,Actual,Expenditure,Total Expenditure,Government Administration,Finance,Development,56,0
+2019,Actual,Expenditure,Total Expenditure,Government Administration,Law,Operating,218,0
+2019,Actual,Expenditure,Total Expenditure,Government Administration,Law,Development,311,0.001
+2019,Actual,Expenditure,Total Expenditure,Government Administration,Organs of State,Operating,508,0.001
+2019,Actual,Expenditure,Total Expenditure,Government Administration,Organs of State,Development,217,0
+2019,Actual,Expenditure,Total Expenditure,Government Administration,Prime Minister's Office,Operating,746,0.001
+2019,Actual,Expenditure,Total Expenditure,Government Administration,Prime Minister's Office,Development,172,0
+2019,Actual,Expenditure,Special Transfers Excluding Top-ups to Endowment and Trust Funds,Special Transfers Excluding Top-ups to Endowment and Trust Funds,Special Transfers Excluding Top-ups to Endowment and Trust Funds,Special Transfers Excluding Top-ups to Endowment and Trust Funds,1561,0.003
+2019,Actual,Expenditure,Top-ups to Endowment and Trust Funds,Top-ups to Endowment and Trust Funds,Top-ups to Endowment and Trust Funds,Top-ups to Endowment and Trust Funds,13568,0.027
+2019,Actual,Expenditure,Interest Costs and Loan Expenses,Interest Costs and Loan Expenses,Interest Costs and Loan Expenses,Interest Costs and Loan Expenses,0,0
+2019,Actual,Expenditure,Capitalisation of Nationally Significant Infrastructure,Capitalisation of Nationally Significant Infrastructure,Capitalisation of Nationally Significant Infrastructure,Capitalisation of Nationally Significant Infrastructure,0,0
+2019,Actual,Expenditure,Depreciation of Nationally Significant Infrastructure,Depreciation of Nationally Significant Infrastructure,Depreciation of Nationally Significant Infrastructure,Depreciation of Nationally Significant Infrastructure,0,0
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Corporate Income Tax,Corporate Income Tax,16732,0.033
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Personal Income Tax,Personal Income Tax,12368,0.024
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Withholding Tax,Withholding Tax,1637,0.003
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Statutory Boards' Contributions,Statutory Boards' Contributions,1798,0.004
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Assets Taxes,Assets Taxes,4762,0.009
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,"Customs, Excise and Carbon Taxes","Customs, Excise and Carbon Taxes",3264,0.006
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Goods and Services Tax,Goods and Services Tax,11164,0.022
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Motor Vehicle Taxes,Motor Vehicle Taxes,2419,0.005
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Betting Taxes,Betting Taxes,2620,0.005
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Stamp Duty,Stamp Duty,4199,0.008
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Other Taxes,Other Taxes,6683,0.013
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Vehicle Quota Premiums,Vehicle Quota Premiums,2865,0.006
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Fees and Charges (Excluding Vehicle Quota Premiums),Fees and Charges (Excluding Vehicle Quota Premiums),3409,0.007
+2019,Actual,Revenue,Operating Revenue,Operating Revenue,Others,Others,354,0.001
+2019,Actual,Revenue,Net Investment Income/Returns Contribution,Net Investment Income/Returns Contribution,Net Investment Income/Returns Contribution,Net Investment Income/Returns Contribution,17038,0.033
+2020,Actual,Expenditure,Total Expenditure,Social Development,Education,Operating,11767,0.025
+2020,Actual,Expenditure,Total Expenditure,Social Development,Education,Development,493,0.001
+2020,Actual,Expenditure,Total Expenditure,Social Development,National Development,Operating,4626,0.01
+2020,Actual,Expenditure,Total Expenditure,Social Development,National Development,Development,1191,0.002
+2020,Actual,Expenditure,Total Expenditure,Social Development,Health,Operating,14311,0.03
+2020,Actual,Expenditure,Total Expenditure,Social Development,Health,Development,949,0.002
+2020,Actual,Expenditure,Total Expenditure,Social Development,Sustainability and the Environment,Operating,1646,0.003
+2020,Actual,Expenditure,Total Expenditure,Social Development,Sustainability and the Environment,Development,708,0.001
+2020,Actual,Expenditure,Total Expenditure,Social Development,"Culture, Community and Youth",Operating,1927,0.004
+2020,Actual,Expenditure,Total Expenditure,Social Development,"Culture, Community and Youth",Development,207,0
+2020,Actual,Expenditure,Total Expenditure,Social Development,Social and Family Development,Operating,3673,0.008
+2020,Actual,Expenditure,Total Expenditure,Social Development,Social and Family Development,Development,93,0
+2020,Actual,Expenditure,Total Expenditure,Social Development,Communications and Information,Operating,611,0.001
+2020,Actual,Expenditure,Total Expenditure,Social Development,Communications and Information,Development,20,0
+2020,Actual,Expenditure,Total Expenditure,Social Development,Social Manpower,Operating,2291,0.005
+2020,Actual,Expenditure,Total Expenditure,Social Development,Social Manpower,Development,3,0
+2020,Actual,Expenditure,Total Expenditure,Security and External Relations,Defence,Operating,13027,0.027
+2020,Actual,Expenditure,Total Expenditure,Security and External Relations,Defence,Development,278,0.001
+2020,Actual,Expenditure,Total Expenditure,Security and External Relations,Home Affairs,Operating,6013,0.013
+2020,Actual,Expenditure,Total Expenditure,Security and External Relations,Home Affairs,Development,800,0.002
+2020,Actual,Expenditure,Total Expenditure,Security and External Relations,Foreign Affairs,Operating,398,0.001
+2020,Actual,Expenditure,Total Expenditure,Security and External Relations,Foreign Affairs,Development,9,0
+2020,Actual,Expenditure,Total Expenditure,Economic Development,Economic Manpower,Operating,4166,0.009
+2020,Actual,Expenditure,Total Expenditure,Economic Development,Economic Manpower,Development,79,0
+2020,Actual,Expenditure,Total Expenditure,Economic Development,Transport,Operating,2945,0.006
+2020,Actual,Expenditure,Total Expenditure,Economic Development,Transport,Development,5327,0.011
+2020,Actual,Expenditure,Total Expenditure,Economic Development,Trade and Industry,Operating,2509,0.005
+2020,Actual,Expenditure,Total Expenditure,Economic Development,Trade and Industry,Development,2910,0.006
+2020,Actual,Expenditure,Total Expenditure,Economic Development,Info-Communications and Media Development,Operating,731,0.002
+2020,Actual,Expenditure,Total Expenditure,Economic Development,Info-Communications and Media Development,Development,53,0
+2020,Actual,Expenditure,Total Expenditure,Government Administration,Finance,Operating,904,0.002
+2020,Actual,Expenditure,Total Expenditure,Government Administration,Finance,Development,46,0
+2020,Actual,Expenditure,Total Expenditure,Government Administration,Law,Operating,196,0
+2020,Actual,Expenditure,Total Expenditure,Government Administration,Law,Development,21,0
+2020,Actual,Expenditure,Total Expenditure,Government Administration,Organs of State,Operating,502,0.001
+2020,Actual,Expenditure,Total Expenditure,Government Administration,Organs of State,Development,59,0
+2020,Actual,Expenditure,Total Expenditure,Government Administration,Prime Minister's Office,Operating,692,0.001
+2020,Actual,Expenditure,Total Expenditure,Government Administration,Prime Minister's Office,Development,184,0
+2020,Actual,Expenditure,Special Transfers Excluding Top-ups to Endowment and Trust Funds,Special Transfers Excluding Top-ups to Endowment and Trust Funds,Special Transfers Excluding Top-ups to Endowment and Trust Funds,Special Transfers Excluding Top-ups to Endowment and Trust Funds,33502,0.07
+2020,Actual,Expenditure,Top-ups to Endowment and Trust Funds,Top-ups to Endowment and Trust Funds,Top-ups to Endowment and Trust Funds,Top-ups to Endowment and Trust Funds,17320,0.036
+2020,Actual,Expenditure,Interest Costs and Loan Expenses,Interest Costs and Loan Expenses,Interest Costs and Loan Expenses,Interest Costs and Loan Expenses,0,0
+2020,Actual,Expenditure,Capitalisation of Nationally Significant Infrastructure,Capitalisation of Nationally Significant Infrastructure,Capitalisation of Nationally Significant Infrastructure,Capitalisation of Nationally Significant Infrastructure,0,0
+2020,Actual,Expenditure,Depreciation of Nationally Significant Infrastructure,Depreciation of Nationally Significant Infrastructure,Depreciation of Nationally Significant Infrastructure,Depreciation of Nationally Significant Infrastructure,0,0
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Corporate Income Tax,Corporate Income Tax,16112,0.034
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Personal Income Tax,Personal Income Tax,12748,0.027
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Withholding Tax,Withholding Tax,1618,0.003
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Statutory Boards' Contributions,Statutory Boards' Contributions,2519,0.005
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Assets Taxes,Assets Taxes,3128,0.007
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,"Customs, Excise and Carbon Taxes","Customs, Excise and Carbon Taxes",3582,0.007
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Goods and Services Tax,Goods and Services Tax,10346,0.022
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Motor Vehicle Taxes,Motor Vehicle Taxes,2133,0.004
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Betting Taxes,Betting Taxes,1722,0.004
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Stamp Duty,Stamp Duty,3896,0.008
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Other Taxes,Other Taxes,3606,0.008
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Vehicle Quota Premiums,Vehicle Quota Premiums,2297,0.005
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Fees and Charges (Excluding Vehicle Quota Premiums),Fees and Charges (Excluding Vehicle Quota Premiums),3181,0.007
+2020,Actual,Revenue,Operating Revenue,Operating Revenue,Others,Others,489,0.001
+2020,Actual,Revenue,Net Investment Income/Returns Contribution,Net Investment Income/Returns Contribution,Net Investment Income/Returns Contribution,Net Investment Income/Returns Contribution,18244,0.038

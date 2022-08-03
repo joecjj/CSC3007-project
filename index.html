@@ -14,7 +14,7 @@
                 position: sticky;
                 display: inline-block;
                 vertical-align: top;
-                max-height: 90vh;
+                max-height: 100vh;
                 overflow-y: auto;
             }
 
@@ -31,7 +31,7 @@
             </button>
             
             <h1 class="title is-1">
-                Group 9's Visualization
+                Group 9's Presentation
             </h1>
             <h4 class="subtitle is-4">Jia Jun, Yi Kang, Stuart</h1 class="title is-4">
             
@@ -42,7 +42,7 @@
             <br>
 
             <h2 class="title is-2 is-flex image is-align-items-center is-justify-content-center">
-                Singapore's Fiscal Position
+                What caused Singapore's budget to increase in 2020?
             </h2>
             <a class="is-flex is-align-items-center is-justify-content-center  is-size-5" 
                     href="https://data.gov.sg/dataset/government-fiscal-position">
@@ -54,31 +54,38 @@
             <div class="columns is-desktop is-tablet">
 
                 <div class="column container is-fluid is-two-thirds-desktop image-column">
-                    
-
                     <div id="diagram_1"></div>
-                    
-                    <!--
-                    <svg width="1280" height="500">
-                        <g></g>
-                    </svg>
-                    -->
                 </div>
                 
                 <div class="column container is-fluid scrollable">
                     <div class="notification is-info content is-size-5">
-                        <h5>What: Data</h5>
+                        <h5>Why are you doing this?</h5>
+                        <ul>
+                            <li>We noticed an interesting anomaly in Singapore's budget data.</li>
+                            <li>We wanted to make a storytelling-focused visualization that informs viewers of this anomaly.</li>
+                            <li>Aimed to be accessible to the public.</li>
+                        </ul>
+                        <h5>What data are you using?</h5>
                             <ul>
-                                <li>Represents the total revenue and expenditure spent across the years</li>
+                                <li>This is Singapore's fiscal position data, showing monetary values for revenue and expenditure.</li>
+                                <li>Taken from data.gov and cleaned using spreadsheets.</li>
                             </ul>
-                        <h5>How: Encode</h5>
+                        <h5>How are you telling the story?</h5>
                             <ul>
-                                <li>Bar marks and encoded with a quantitative value attribute
-                                    with one spatial position channel each</li>
+                                <li>A series of charts, each serving as a chapter in the story.</li>
+                                <li>Mimics the way we discovered this anomaly.</li>
                             </ul>
-                        <h5>Why: Task</h5>
+                        <h5>Why the bar chart?</h5>
                             <ul>
-                                <li> To find out the biggest amount of revenue and expenditure spent in one year</li>
+                                <li>Visually discernible way to spot trends in the government's budget through the years.</li>
+                            </ul>
+                        <h5>What does this bar chart tell?</h5>
+                            <ul>
+                                <li>In 2020, the annual amount in the government's budget saw a monumental increase.</li>
+                            </ul>
+                        <h5>What does this bar chart not tell?</h5>
+                            <ul>
+                                <li>What happened to the government's budget in 2020.</li>
                             </ul>
                         <!-- <h5>Some tidbits</h5>
                             <ul>
@@ -90,7 +97,45 @@
                                 <br>
                                 <li>This is based on the UK budget shown in milestone 1, instead done in a hierarchical visualization with the SG budget.</li>
                                 <br>
-                                <li>Hope that this visualization helps to provide you with some insight on SG's fiscal position for 2021!</li> -->
+                                <li>Hope that this visualization helps to provide you with some insight on SG's fiscal position for 2021!</li> 
+                            </ul>-->
+                    </div>
+                </div>
+            </div>
+
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+            <hr class="solid">
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+
+            <br>
+
+            <h2 class="title is-2 is-flex image is-align-items-center is-justify-content-center">
+                Diving into 2020
+            </h2>
+
+            <br> 
+
+            <div class="columns is-desktop is-tablet">
+
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <div id="diagram_2"></div>
+                </div>
+                
+                <div class="column container is-fluid scrollable">
+                    <div class="notification is-info content is-size-5">
+                        <h5>Why the packed bubble chart?</h5>
+                            <ul>
+                                <li>Group items in the 2020 government's budget by categories</li>
+                                <li>Easy to compare different categories with each other.</li>
+                                <li>Side-by-side comparism visualizes the ratio of how much money is received and spent.</li>
+                            </ul>
+                        <h5>What does this packed bubble chart tell?</h5>
+                            <ul>
+                                <li>Expenditure was much higher than revenue in 2020.</li>
+                            </ul>
+                        <h5>What does this packed bubble chart not tell?</h5>
+                            <ul>
+                                <li>The change in an item's value over the years.</li>
                             </ul>
                     </div>
                 </div>
@@ -103,7 +148,7 @@
             <br>
 
             <h2 class="title is-2 is-flex image is-align-items-center is-justify-content-center">
-                Year with Highest Revenue and Expenditure
+                Comparing 2019 and 2020
             </h2>
 
             <br> 
@@ -111,41 +156,66 @@
             <div class="columns is-desktop is-tablet">
 
                 <div class="column container is-fluid is-two-thirds-desktop image-column">
-
-                    <div id="diagram_2"></div>
-                    
-                    <!--
-                    <svg width="1280" height="500">
-                        <g></g>
-                    </svg>
-                    -->
+                    <div id="diagram_3"></div>
                 </div>
                 
                 <div class="column container is-fluid scrollable">
-                    <div class="notification is-primary content is-size-5">
-                        <h5>What: Data</h5>
+                    <div class="notification is-info content is-size-5">
+                        <h5>Another packed bubble chart?</h5>
                             <ul>
-                                <li>Represents the detailed spending of the revenue and expenditure from each department</li>
+                                <li>It includes 2019 this time!</li>
+                                <li>Allows comparism between items for both years.</li>
+                                <li>Can observe the change in values.</li>
                             </ul>
-                        <h5>How: Encode</h5>
+                        <h5>What does this packed bubble chart tell?</h5>
                             <ul>
-                                <li>Area marks and containment, with circular layout</li>
+                                <li>What items saw an increase for the 2020 budget.</li>
                             </ul>
-                        <h5>Why:Task?</h5>
+                        <h5>What does this packed bubble chart not tell?</h5>
                             <ul>
-                                <li> To provide a detailed side by side comparision between the revenue and the expenditure</li>
+                                <li>A clear indication of the item that caused the 2020 budget to skyrocket.</li>
                             </ul>
-                        <h5>Some tidbits</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+            <hr class="solid">
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+
+            <br>
+
+            <h2 class="title is-2 is-flex image is-align-items-center is-justify-content-center">
+                The culprit unmasked
+            </h2>
+
+            <br> 
+
+            <div class="columns is-desktop is-tablet">
+
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    <div id="diagram_4"></div>
+                </div>
+                
+                <div class="column container is-fluid scrollable">
+                    <div class="notification is-info content is-size-5">
+                        <h5>A pie chart!?!?</h5>
                             <ul>
-                                <li>Zoom into circles by clicking on them. Clicking again on the same circle will zoom you out</li>
-                                <br>
-                                <li>Hover over a circle to see what it represents and how much money it's worth.</li>
-                                <br>
-                                <li>Greenish hues symbolize expenditure, while redish hues symbolize revenue.</li>
-                                <br>
-                                <li>This is based on the UK budget shown in milestone 1, instead done in a hierarchical visualization with the SG budget.</li>
-                                <br>
-                                <li>Hope that this visualization helps to provide you with some insight on SG's fiscal position for 2021!</li>
+                                <li>Yes</li>
+                                <li>It only shows 2 items</li>
+                                <li>More for style over substance (Overlayed text)</li>
+                            </ul>
+                        <h5>What does this pie chart chart tell?</h5>
+                            <ul>
+                                <li>The sheer in difference in value between years for special transfers.</li>
+                                <li>Gives an identity to what caused the massive budget increase for 2020</li>
+                            </ul>
+                        <h5>What does this pie chart not tell?</h5>
+                            <ul>
+                                <li>Why did this happen?</li>
+                                <li>Up for us to speculate....</li>
+                                <li>Try tying it to real-world events.</li>  
+                                <li>*cough* *cough*</li>
                             </ul>
                     </div>
                 </div>
@@ -154,6 +224,16 @@
             <!------------------------------------------------ Section Divide ---------------------------------------------------------->
             <hr class="solid">
             <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+
+            <br>
+
+            <h2 class="title is-2 is-flex image is-align-items-center is-justify-content-center">
+                Why not sunburst?
+            </h2>
+
+            <br> 
+
+            <div id="diagram_5"></div>
 
         </section>
         <script src="script.js"></script>
