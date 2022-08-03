@@ -3,8 +3,12 @@ let width = 400; //1200
 let height = 400; //580
 let margin = 50;
 
+// Data: Live data is not possible, but also not needed
+// Task : I want to know how much the Singapore government spends and receives per year 
+
 var ordinalColor = d3.scaleOrdinal()
     .domain([
+        "",
         "Fiscal Year 2021", // 0
             "Expenditure", // 1
                 "Total Expenditure", // 2
@@ -55,54 +59,55 @@ var ordinalColor = d3.scaleOrdinal()
                 "Net Investment Income/Returns Contribution" //  47
     ])
     .range([
-        "rgba(0, 0, 0, 0)", // "Fiscal Year 2021", // 0
-            "rgba(39, 245, 217, 0.4)", // "Expenditure", // 1
-                "rgba(109, 221, 197, 0.7)", // "Total Expenditure", // 2
-                    "rgba(46, 194, 214, 0.7)", // "Social Development", // 3
-                        "rgba(25, 112, 123, 0.7)", // "Education", // 4
-                        "rgba(25, 112, 123, 0.7)", // "National Development", // 5
-                        "rgba(25, 112, 123, 0.7)", // "Health", // 6
-                        "rgba(25, 112, 123, 0.7)", // "Sustainability and the Environment", // 7
-                        "rgba(25, 112, 123, 0.7)", // "Culture, Community and Youth", // 8
-                        "rgba(25, 112, 123, 0.7)", // "Social and Family Development", // 9
-                        "rgba(25, 112, 123, 0.7)", // "Communications and Information", // 10
-                        "rgba(25, 112, 123, 0.7)", // "Manpower", // 11
-                    "rgba(66, 126, 206, 0.7)", // "Security and External Relations", // 12
-                        "rgba(44, 83, 137, 0.7)", // "Defence", // 13
-                        "rgba(44, 83, 137, 0.7)", // "Home Affairs", // 14
-                        "rgba(44, 83, 137, 0.7)", // "Foreign Affairs", // 15
-                    "rgba(57, 193, 84, 0.7)", // "Economic Development", // 16
-                        "rgba(38, 123, 55, 0.7)", // "Manpower", // 17
-                        "rgba(38, 123, 55, 0.7)", // "Transport", // 18
-                        "rgba(38, 123, 55, 0.7)", // "Trade and Industry", // 19
-                        "rgba(38, 123, 55, 0.7)", // "Info-Communications and Media Development", // 20
-                    "rgba(207, 211, 73, 0.7)", // "Government Administration", // 21
-                        "rgba(137, 140, 46, 0.7)", // "Finance", // 22
-                        "rgba(137, 140, 46, 0.7)", // "Law", // 23
-                        "rgba(137, 140, 46, 0.7)", // "Organs of State", // 24
-                        "rgba(137, 140, 46, 0.7)", // "Prime Minister's Office", // 25
-                "rgba(109, 221, 197, 0.7)", // "Special Transfers Excluding Top-ups to Endowment and Trust Funds", // 26
-                "rgba(109, 221, 197, 0.7)", // "Top-ups to Endowment and Trust Funds", // 27
-                "rgba(109, 221, 197, 0.7)", // "Interest Costs and Loan Expenses", // 28
-                "rgba(109, 221, 197, 0.7)", // "Capitalisation of Nationally Significant Infrastructure", // 29
-                "rgba(109, 221, 197, 0.7)", // "Depreciation of Nationally Significant Infrastructure", //  30
-            "rgba(245, 39, 39, 0.4)", // "Revenue", // 31
-                "rgba(228, 109, 109, 0.7)", // "Operating Revenue", // 32
-                    "rgba(155, 17, 99, 0.7)", // "Corporate Income Tax", // 33
-                    "rgba(155, 17, 99, 0.7)", // "Personal Income Tax", // 34
-                    "rgba(155, 17, 99, 0.7)", // "Withholding Tax", // 35
-                    "rgba(155, 17, 99, 0.7)", // "Statutory Boards' Contributions", // 36
-                    "rgba(155, 17, 99, 0.7)", // "Assets Taxes", // 37
-                    "rgba(155, 17, 99, 0.7)", // "Customs, Excise and Carbon Taxes", // 38
-                    "rgba(155, 17, 99, 0.7)", // "Goods and Services Tax", // 39
-                    "rgba(155, 17, 99, 0.7)", // "Motor Vehicle Taxes", // 40
-                    "rgba(155, 17, 99, 0.7)", // "Betting Taxes", // 41
-                    "rgba(155, 17, 99, 0.7)", // "Stamp Duty", // 42
-                    "rgba(155, 17, 99, 0.7)", // "Other Taxes", // 43
-                    "rgba(155, 17, 99, 0.7)", // "Vehicle Quota Premiums", // 44
-                    "rgba(155, 17, 99, 0.7)", // "Fees and Charges (Excluding Vehicle Quota Premiums)", // 45
-                    "rgba(155, 17, 99, 0.7)", // "Others", // 46
-                "rgba(228, 109, 109, 0.7)", // "Net Investment Income/Returns Contribution" //  47
+        "rgba(0, 0, 0, 0)", // "",
+        "rgba(0, 0, 0, 0)", // "Fiscal Year 2021"
+            "rgba(39, 245, 217, 0.4)", // "Expenditure"
+                "rgba(109, 221, 197, 0.7)", // "Total Expenditure"
+                    "rgba(46, 194, 214, 0.7)", // "Social Development"
+                        "rgba(25, 112, 123, 0.7)", // "Education"
+                        "rgba(25, 112, 123, 0.7)", // "National Development"
+                        "rgba(25, 112, 123, 0.7)", // "Health"
+                        "rgba(25, 112, 123, 0.7)", // "Sustainability and the Environment"
+                        "rgba(25, 112, 123, 0.7)", // "Culture, Community and Youth"
+                        "rgba(25, 112, 123, 0.7)", // "Social and Family Development"
+                        "rgba(25, 112, 123, 0.7)", // "Communications and Information"
+                        "rgba(25, 112, 123, 0.7)", // "Manpower"
+                    "rgba(66, 126, 206, 0.7)", // "Security and External Relations"
+                        "rgba(44, 83, 137, 0.7)", // "Defence"
+                        "rgba(44, 83, 137, 0.7)", // "Home Affairs"
+                        "rgba(44, 83, 137, 0.7)", // "Foreign Affairs"
+                    "rgba(57, 193, 84, 0.7)", // "Economic Development"
+                        "rgba(38, 123, 55, 0.7)", // "Manpower"
+                        "rgba(38, 123, 55, 0.7)", // "Transport"
+                        "rgba(38, 123, 55, 0.7)", // "Trade and Industry"
+                        "rgba(38, 123, 55, 0.7)", // "Info-Communications and Media Development"
+                    "rgba(207, 211, 73, 0.7)", // "Government Administration"
+                        "rgba(137, 140, 46, 0.7)", // "Finance"
+                        "rgba(137, 140, 46, 0.7)", // "Law"
+                        "rgba(137, 140, 46, 0.7)", // "Organs of State"
+                        "rgba(137, 140, 46, 0.7)", // "Prime Minister's Office"
+                "rgba(109, 221, 197, 0.7)", // "Special Transfers Excluding Top-ups to Endowment and Trust Funds"
+                "rgba(109, 221, 197, 0.7)", // "Top-ups to Endowment and Trust Funds"
+                "rgba(109, 221, 197, 0.7)", // "Interest Costs and Loan Expenses"
+                "rgba(109, 221, 197, 0.7)", // "Capitalisation of Nationally Significant Infrastructure"
+                "rgba(109, 221, 197, 0.7)", // "Depreciation of Nationally Significant Infrastructure"
+            "rgba(245, 39, 39, 0.4)", // "Revenue"
+                "rgba(228, 109, 109, 0.7)", // "Operating Revenue"
+                    "rgba(155, 17, 99, 0.7)", // "Corporate Income Tax"
+                    "rgba(155, 17, 99, 0.7)", // "Personal Income Tax"
+                    "rgba(155, 17, 99, 0.7)", // "Withholding Tax"
+                    "rgba(155, 17, 99, 0.7)", // "Statutory Boards' Contributions"
+                    "rgba(155, 17, 99, 0.7)", // "Assets Taxes"
+                    "rgba(155, 17, 99, 0.7)", // "Customs, Excise and Carbon Taxes"
+                    "rgba(155, 17, 99, 0.7)", // "Goods and Services Tax"
+                    "rgba(155, 17, 99, 0.7)", // "Motor Vehicle Taxes"
+                    "rgba(155, 17, 99, 0.7)", // "Betting Taxes"
+                    "rgba(155, 17, 99, 0.7)", // "Stamp Duty"
+                    "rgba(155, 17, 99, 0.7)", // "Other Taxes"
+                    "rgba(155, 17, 99, 0.7)", // "Vehicle Quota Premiums"
+                    "rgba(155, 17, 99, 0.7)", // "Fees and Charges (Excluding Vehicle Quota Premiums)"
+                    "rgba(155, 17, 99, 0.7)", // "Others"
+                "rgba(228, 109, 109, 0.7)", // "Net Investment Income/Returns Contribution" 
     ]);
 
 color = d3.scaleLinear()
@@ -112,9 +117,7 @@ color = d3.scaleLinear()
 
 format = d3.format(",d");
 
-
-
-Promise.all([d3.csv("data/2021-fiscal-position-sg.csv")])
+Promise.all([d3.csv("data/everything-fiscal-position-sg.csv")])
 .then(data => {
     
     console.log(data[0]);
@@ -131,12 +134,12 @@ Promise.all([d3.csv("data/2021-fiscal-position-sg.csv")])
     
     //console.log(groups.get('Social Development'))
     
-
+    console.log(groups)
     const root = d3.hierarchy(groups);
     root.sum(function(d) {
         return d[1];
     });
-    console.log(root)
+    //root.sort(d3_layout_packSort);
 
     var packLayout = d3.pack()
     .size([height, height]);
@@ -259,4 +262,8 @@ function sumAmount(group) {
     return d3.sum(group, function(d) {
         return d.amount;
     });
+}
+
+function d3_layout_packSort(a, b) {
+    return (a.value - b.value);
 }
