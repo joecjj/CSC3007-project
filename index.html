@@ -39,10 +39,10 @@
             <hr class="solid">
             <!------------------------------------------------ Section Divide ---------------------------------------------------------->
                 
-            <br><br>
+            <br>
 
             <h2 class="title is-2 is-flex image is-align-items-center is-justify-content-center">
-                Singapore's 2021 Fiscal Position
+                Singapore's Fiscal Position
             </h2>
             <a class="is-flex is-align-items-center is-justify-content-center  is-size-5" 
                     href="https://data.gov.sg/dataset/government-fiscal-position">
@@ -54,10 +54,9 @@
             <div class="columns is-desktop is-tablet">
 
                 <div class="column container is-fluid is-two-thirds-desktop image-column">
+                    
 
-                    <div id="diagram">
-                        <div class="tooltip"></div>
-                    </div>
+                    <div id="diagram_1"></div>
                     
                     <!--
                     <svg width="1280" height="500">
@@ -95,6 +94,65 @@
                     </div>
                 </div>
             </div>
+
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+            <hr class="solid">
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+
+            <br>
+
+            <h2 class="title is-2 is-flex image is-align-items-center is-justify-content-center">
+                Year with Highest Revenue and Expenditure
+            </h2>
+
+            <br> 
+
+            <div class="columns is-desktop is-tablet">
+
+                <div class="column container is-fluid is-two-thirds-desktop image-column">
+
+                    <div id="diagram_2"></div>
+                    
+                    <!--
+                    <svg width="1280" height="500">
+                        <g></g>
+                    </svg>
+                    -->
+                </div>
+                
+                <div class="column container is-fluid scrollable">
+                    <div class="notification is-primary content is-size-5">
+                        <h5>What is this?</h5>
+                            <ul>
+                                <li>A storytelling visualization to showcase the Singapore government's revenue and expenditures for 2021.</li>
+                            </ul>
+                        <h5>Who is this for?</h5>
+                            <ul>
+                                <li>For a general audience, from novice users to domain experts, local or international.</li>
+                            </ul>
+                        <h5>How was it done?</h5>
+                            <ul>
+                                <li>Data from data.gov.sg for was cleaned then transformed into this hierarchical circle packing chart using d3.</li>
+                            </ul>
+                        <h5>Some tidbits</h5>
+                            <ul>
+                                <li>Zoom into circles by clicking on them. Clicking again on the same circle will zoom you out</li>
+                                <br>
+                                <li>Hover over a circle to see what it represents and how much money it's worth.</li>
+                                <br>
+                                <li>Greenish hues symbolize expenditure, while redish hues symbolize revenue.</li>
+                                <br>
+                                <li>This is based on the UK budget shown in milestone 1, instead done in a hierarchical visualization with the SG budget.</li>
+                                <br>
+                                <li>Hope that this visualization helps to provide you with some insight on SG's fiscal position for 2021!</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
+            <hr class="solid">
+            <!------------------------------------------------ Section Divide ---------------------------------------------------------->
 
         </section>
         <script src="script.js"></script>
