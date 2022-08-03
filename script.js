@@ -132,9 +132,7 @@ Promise.all([d3.csv("data/everything-fiscal-position-sg.csv")])
         //function(d) { return d.type; }
     );
     
-    //console.log(groups.get('Social Development'))
-    
-    console.log(groups)
+
     const root = d3.hierarchy(groups);
     root.sum(function(d) {
         return d[1];
@@ -143,7 +141,6 @@ Promise.all([d3.csv("data/everything-fiscal-position-sg.csv")])
 
     var packLayout = d3.pack()
     .size([height, height]);
-    
     packLayout(root);
 
     let focus = root;
