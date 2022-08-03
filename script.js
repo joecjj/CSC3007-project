@@ -9,7 +9,7 @@ let margin = 50;
 var ordinalColor = d3.scaleOrdinal()
     .domain([
         "",
-        "Fiscal Year 2021", // 0
+        "Fiscal Year 2020", // 0
             "Expenditure", // 1
                 "Total Expenditure", // 2
                     "Social Development", // 3
@@ -60,7 +60,7 @@ var ordinalColor = d3.scaleOrdinal()
     ])
     .range([
         "rgba(0, 0, 0, 0)", // "",
-        "rgba(0, 0, 0, 0)", // "Fiscal Year 2021"
+        "rgba(0, 0, 0, 0)", // "Fiscal Year 2020"
             "rgba(39, 245, 217, 0.4)", // "Expenditure"
                 "rgba(109, 221, 197, 0.7)", // "Total Expenditure"
                     "rgba(46, 194, 214, 0.7)", // "Social Development"
@@ -117,6 +117,10 @@ color = d3.scaleLinear()
 
 format = d3.format(",d");
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------------  //
+// --------------------------------------------------------------------- Graph 1 ---------------------------------------------------------------------  //
+// ----------------------------------------------------------------------------------------------------------------------------------------------------  //
+
 Promise.all([d3.csv("data/everything-fiscal-position-sg.csv")])
 .then(data => {
     
@@ -124,11 +128,11 @@ Promise.all([d3.csv("data/everything-fiscal-position-sg.csv")])
 
     let groups = d3.rollup(data[0],
         sumAmount,
-        function(d) { return  d.financial_year; },
-        function(d) { return d.category; },
-        function(d) { return d.item; },
-        function(d) { return d.sector; },
-        function(d) { return d.ministry; }
+        function(d) { return  d.financial_year; }
+        //function(d) { return d.category; },
+        //function(d) { return d.item; },
+        //function(d) { return d.sector; },
+        //function(d) { return d.ministry; }
         //function(d) { return d.type; }
     );
     
@@ -137,6 +141,7 @@ Promise.all([d3.csv("data/everything-fiscal-position-sg.csv")])
     console.log(groups)
     const root = d3.hierarchy(groups);
     root.sum(function(d) {
+        console.log(d[1])
         return d[1];
     });
     //root.sort(d3_layout_packSort);
@@ -145,20 +150,12 @@ Promise.all([d3.csv("data/everything-fiscal-position-sg.csv")])
     .size([height, height]);
     
     packLayout(root);
+    console.log(root)
 
     let focus = root;
     let view;
 
-    const tooltip = d3.select(".tooltip")
-        .style("opacity", 0)
-        .style("background-color", "white")
-        .style("border", "solid")
-        .style("border-width", "2px")
-        .style("border-radius", "5px")
-        .style("padding", "5px")
-        .style("text-align", "center")
-
-    let svg = d3.select("#diagram")
+    let svg = d3.select("#diagram_1")
         .append("svg")
         .style("display", "block")
         .attr("viewBox",`-${width / 2 + margin} -${height / 2 + 5} ${width + margin*2} ${height +10}`)
@@ -224,6 +221,17 @@ Promise.all([d3.csv("data/everything-fiscal-position-sg.csv")])
             .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
     }
 
+    const tooltip = d3.select("#diagram_1")
+        .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "2px")
+        .style("border-radius", "5px")
+        .style("padding", "5px")
+        .style("text-align", "center")
+
     function mouseover(d) {
         tooltip
             .style("display", "block")
@@ -255,8 +263,157 @@ Promise.all([d3.csv("data/everything-fiscal-position-sg.csv")])
             .style("opacity", 1)
             .style("stroke", null)
     }
-
 })
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------  //
+// --------------------------------------------------------------------- Graph 2 ---------------------------------------------------------------------  //
+// ----------------------------------------------------------------------------------------------------------------------------------------------------  //
+
+Promise.all([d3.csv("data/2020-fiscal-position-sg.csv")])
+.then(data => {
+    
+    console.log(data[0]);
+
+    let groups = d3.rollup(data[0],
+        sumAmount,
+        function(d) { return  d.financial_year; },
+        function(d) { return d.category; },
+        function(d) { return d.item; },
+        function(d) { return d.sector; },
+        function(d) { return d.ministry; }
+        //function(d) { return d.type; }
+    );
+    
+    //console.log(groups.get('Social Development'))
+    
+    console.log(groups)
+    const root = d3.hierarchy(groups);
+    root.sum(function(d) {
+        console.log(d[1])
+        return d[1];
+    });
+    //root.sort(d3_layout_packSort);
+
+    var packLayout = d3.pack()
+    .size([height, height]);
+    
+    packLayout(root);
+    console.log(root)
+
+    let focus = root;
+    let view;
+
+    let svg = d3.select("#diagram_2")
+        .append("svg")
+        .style("display", "block")
+        .attr("viewBox",`-${width / 2 + margin} -${height / 2 + 5} ${width + margin*2} ${height +10}`)
+        .style("cursor", "pointer")
+        .on("click", (event) => zoom(event, root));    
+
+    const nodes = svg.append('g')
+        //.attr('transform', 'translate(' + width/2 +  ',' + 0 +')')
+        .selectAll('circle')
+        .data(root.descendants())
+        .join('circle')
+        //.attr("class", d =>d.data[0])
+        //.attr("fill", d => d.children ? color(d.depth) : "white")
+        .attr("fill", d => ordinalColor(d.data[0]))
+        .attr("pointer-events", d => !d.children ? "none" : null)
+        //.on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
+        //.on("mouseout", function() { d3.select(this).attr("stroke", null); })
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
+        .on("click", (event, d) => focus !== d && (zoom(event, d), event.stopPropagation()));
+
+    const label = svg.append('g')
+        //.attr('transform', 'translate(' + width/2 +  ',' + 0 +')')
+        .style("font", "10px sans-serif")
+        .attr("pointer-events", "none")
+        .attr("text-anchor", "middle")
+        .selectAll("text")
+        .data(root.descendants())
+        .join("text")
+        .style("fill-opacity", d => d.parent === root ? 1 : 0)
+        .style("display", d => d.parent === root ? "inline" : "none");
+        //.text(d => d.data[0]);
+        //.text(d => d.value);
+    
+    zoomTo([root.x, root.y, root.r * 2]);
+
+    function zoomTo(v) {
+        const k = width / v[2];
+    
+        view = v;
+        label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+        nodes.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+        nodes.attr("r", d => d.r * k);
+    }
+
+    function zoom(event, d) {
+        const focus0 = focus;
+        focus = d;
+        const transition = svg.transition()
+            .duration(event.altKey ? 7500 : 750)
+            .tween("zoom", d => {
+                //console.log("test"+d)
+                const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
+                return t => zoomTo(i(t));
+            });
+    
+        label
+            .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+            .transition(transition)
+            .style("fill-opacity", d => d.parent === focus ? 1 : 0)
+            .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+            .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+    }
+
+    const tooltip = d3.select("#diagram_2")
+        .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "2px")
+        .style("border-radius", "5px")
+        .style("padding", "5px")
+        .style("text-align", "center")
+
+    function mouseover(d) {
+        tooltip
+            .style("display", "block")
+            .style("opacity", 0.9);
+        d3.select(this)
+            .transition()
+            .style("stroke", "white")
+            .style("opacity", 0.6)
+            .style('stroke-width', 2 + "px");
+    }
+
+    function mousemove(event, d) {
+        tooltip
+            .html(
+                d.data[0] + "<br>" + 
+                "$" + d.value/1000 + " billion"
+            ) 
+            .style("position", "absolute")
+            .style("top", (event.pageY - 1250)+"px")
+            .style("left",(event.pageX + 15)+"px");
+    }
+
+    function mouseleave(d) {
+        tooltip
+            .style("opacity", 0)
+            .style("display", "none");
+        d3.select(this)
+            .transition()
+            .style("opacity", 1)
+            .style("stroke", null)
+    }
+})
+
+
 
 function sumAmount(group) {
     return d3.sum(group, function(d) {
