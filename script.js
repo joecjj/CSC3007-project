@@ -381,6 +381,33 @@ Promise.all([d3.csv("data/2020-fiscal-position-sg.csv")])
                 .style("opacity", 1)
                 .style("stroke", null)
         }
+
+        legendDomain = ["Expenditure", "Social Development", "Security and External Relations", "Economic Development", "Government Administration", "Revenue"]
+        svg.selectAll("mydots")
+              .data(legendDomain)
+              .enter()
+              .append("circle")
+                .attr("cx", width/2 - margin - 50)
+                .attr("cy", function(d,i){ return height/2 + i*20 -margin - 50})
+                .attr("r", 5)
+                .style("fill", function(d){ return ordinalColor(d)})
+                .style("stroke", "grey")
+                .style('stroke-width', 0.2 + "px");
+
+            // Add one dot in the legend for each name.
+            svg.selectAll("mylabels")
+              .data(legendDomain)
+              .enter()
+              .append("text")
+                .attr("x", width/2 - margin - 40)
+                .attr("y", function(d,i){ return height/2 + i *20 -margin - 50})
+                .style("fill", function(d){ return ordinalColor(d)})
+                .text(function(d){ return d})
+                .style("font", "10px sans-serif")
+                .attr("text-anchor", "left")
+                .style("alignment-baseline", "middle")
+                .style("stroke", "grey")
+                .style('stroke-width', 0.2 + "px");
     })
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------  //
@@ -529,6 +556,33 @@ Promise.all([d3.csv("data/2019-2020-fiscal-position-sg.csv")])
                 .style("stroke", null)
         }
 
+        legendDomain = ["2019", "2020", "Expenditure", "Social Development", "Security and External Relations", "Economic Development", "Government Administration", "Revenue"]
+        svg.selectAll("mydots")
+              .data(legendDomain)
+              .enter()
+              .append("circle")
+                .attr("cx", width/2 - margin - 25)
+                .attr("cy", function(d,i){ return height/2 + i*12 -margin - 35})
+                .attr("r", 4)
+                .style("fill", function(d){ return ordinalColor(d)})
+                .style("stroke", "grey")
+                .style('stroke-width', 0.2 + "px");
+
+            // Add one dot in the legend for each name.
+            svg.selectAll("mylabels")
+              .data(legendDomain)
+              .enter()
+              .append("text")
+                .attr("x", width/2 - margin - 15)
+                .attr("y", function(d,i){ return height/2 + i *12 -margin - 35})
+                .style("fill", function(d){ return ordinalColor(d)})
+                .text(function(d){ return d})
+                .style("font", "8px sans-serif")
+                .attr("text-anchor", "left")
+                .style("alignment-baseline", "middle")
+                .style("stroke", "grey")
+                .style('stroke-width', 0.2 + "px");
+
     });
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------  //
@@ -631,6 +685,33 @@ Promise.all([d3.csv("data/special-transfers.csv")])
                 .style("opacity", 1)
                 .style("stroke", null)
         }
+
+        legendDomain = ["2019", "2020"]
+        svg.selectAll("mydots")
+              .data(legendDomain)
+              .enter()
+              .append("circle")
+                .attr("cx", width/2 - margin + 15)
+                .attr("cy", function(d,i){ return height/2 + i*20 -margin - 30})
+                .attr("r", 5)
+                .style("fill", function(d){ return ordinalColor(d)})
+                .style("stroke", "grey")
+                .style('stroke-width', 0.2 + "px");
+
+            // Add one dot in the legend for each name.
+            svg.selectAll("mylabels")
+              .data(legendDomain)
+              .enter()
+              .append("text")
+                .attr("x", width/2 - margin +25)
+                .attr("y", function(d,i){ return height/2 + i *20 -margin - 30})
+                .style("fill", function(d){ return ordinalColor(d)})
+                .text(function(d){ return d})
+                .style("font", "10px sans-serif")
+                .attr("text-anchor", "left")
+                .style("alignment-baseline", "middle")
+                .style("stroke", "grey")
+                .style('stroke-width', 0.2 + "px");
 
     });
 
